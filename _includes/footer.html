@@ -1,0 +1,12 @@
+<footer class="site-footer">
+  <div class="site-shell site-shell-chrome">
+    {% if site.navigation %}
+    <nav class="footer-nav" aria-label="Footer">
+      {% for item in site.navigation %}
+      <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
+      {% endfor %}
+    </nav>
+    {% endif %}
+    <span class="footer-copy">&copy; {{ site.time | date: '%Y' }} {{ site.author.name | default: site.title }} · Design inspired by <a href="https://owltastic.com/">owltastic</a></span>
+  </div>
+</footer>

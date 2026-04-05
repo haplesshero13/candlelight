@@ -1,0 +1,22 @@
+@use "variables" as *;
+
+// ============================================================
+// Dark section — Dark bg components
+// ============================================================
+
+.dark-section {
+  background-color: $bg-dark;
+  color: $text-light;
+  padding: $section-pad 0;
+
+  h1, h2, h3, h4, h5, h6 {
+    color: $text-light;
+  }
+
+  a {
+    color: $text-light;
+    &:hover {
+      color: $accent;
+    }
+  }
+}

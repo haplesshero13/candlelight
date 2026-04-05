@@ -1,0 +1,117 @@
+@use "variables" as *;
+
+// ============================================================
+// Base — Reset, typography, links
+// ============================================================
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: $font-body;
+  font-size: 18px;
+  line-height: 1.6;
+  color: $text-primary;
+  background-color: $bg-page;
+}
+
+// Headings
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-heading;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.2;
+  color: $text-primary;
+}
+
+h1 {
+  font-size: 72px;
+  line-height: 1.1;
+}
+
+h2 {
+  font-size: 32px;
+  line-height: 1.25;
+}
+
+// Links
+a {
+  color: $text-primary;
+  text-decoration: none;
+  transition: color 0.15s ease;
+
+  &:hover {
+    color: $accent;
+  }
+}
+
+// Images
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+// Blockquotes
+blockquote {
+  border-left: 3px solid $accent;
+  padding-left: 1.5em;
+  margin: 1.5em 0;
+  font-style: italic;
+  color: $text-secondary;
+}
+
+// Lists
+ul,
+ol {
+  margin: 1em 0;
+  padding-left: 1.5em;
+}
+
+// Horizontal rule
+hr {
+  border: none;
+  border-top: 0.5px solid $border-muted;
+  margin: 2em 0;
+}
+
+.reading-flow > * + * {
+  margin-top: 1.25rem;
+}
+
+.reading-flow h2,
+.reading-flow h3,
+.reading-flow h4 {
+  margin-top: 2.5rem;
+}
+
+.reading-flow ul,
+.reading-flow ol {
+  padding-left: 1.4rem;
+}
+
+.reading-flow li + li {
+  margin-top: 0.35rem;
+}
+
+.reading-flow pre,
+.reading-flow figure,
+.reading-flow img {
+  margin: 2rem 0;
+}

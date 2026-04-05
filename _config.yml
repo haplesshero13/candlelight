@@ -1,0 +1,26 @@
+title: "Avery Yen"
+tagline: "Research & Writing"
+description: "Technical research blog by Avery Yen"
+url: "https://averyyen.dev"
+baseurl: ""
+author:
+  name: "Avery Yen"
+navigation:
+  - title: "Home"
+    url: "/"
+  - title: "Recent Writing"
+    url: "/#recent-writing"
+
+plugins:
+  - jekyll-seo-tag
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+    values:
+      layout: "page"

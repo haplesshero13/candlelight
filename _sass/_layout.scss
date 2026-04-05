@@ -1,0 +1,158 @@
+@use "variables" as *;
+
+// ============================================================
+// Layout — Header, footer, page structure
+// ============================================================
+
+// Header
+.site-header {
+  background-color: $bg-chrome;
+  border-bottom: 0.5px solid $border;
+}
+
+.site-shell {
+  width: min(100%, $max-width);
+  margin: 0 auto;
+}
+
+.site-shell-chrome {
+  padding: $chrome-pad;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (max-width: $bp-mobile) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+}
+
+.site-name {
+  font-family: $font-heading;
+  font-size: 24px;
+  font-weight: 400;
+  font-style: normal;
+  color: $text-primary;
+
+  &:hover {
+    color: $text-primary;
+  }
+}
+
+.site-nav,
+.footer-nav {
+  display: flex;
+  gap: 24px;
+
+  @media (max-width: $bp-mobile) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+}
+
+.site-nav a,
+.footer-nav a {
+  font-family: $font-mono;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: $text-primary;
+  padding-bottom: 2px;
+
+  &:hover {
+    color: $accent;
+  }
+}
+
+.site-nav a.active {
+  border-bottom: 0.5px solid $text-primary;
+}
+
+// Footer
+.site-footer {
+  background-color: $bg-chrome;
+  border-top: 0.5px solid $border;
+}
+
+// Main content wrapper
+.site-content {
+  width: min(100%, $max-width);
+  margin: 0 auto;
+  padding: 0 8%;
+}
+
+.home-content {
+  max-width: $reading-width;
+  margin: 0 auto;
+  padding: $section-pad 0 56px;
+}
+
+// Section label
+.section-label {
+  font-family: $font-mono;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: $text-secondary;
+  margin-bottom: 1.5em;
+}
+
+.recent-posts {
+  padding: 0 0 $section-pad;
+}
+
+.post-list {
+  border-top: 0.5px solid $border-muted;
+}
+
+.post-item {
+  padding: $section-pad 0;
+  border-bottom: 0.5px solid $border-muted;
+}
+
+.post-item-title {
+  font-size: 32px;
+  line-height: 1.25;
+  margin-bottom: 0.5em;
+  font-style: normal;
+
+  a {
+    color: $text-primary;
+
+    &:hover {
+      color: $accent;
+    }
+  }
+}
+
+.post-item-excerpt {
+  color: $text-secondary;
+  margin-bottom: 1em;
+  line-height: 1.6;
+  max-width: $reading-width;
+}
+
+.read-more {
+  font-family: $font-mono;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: $accent;
+
+  &:hover {
+    color: $text-primary;
+  }
+}
+
+.footer-copy {
+  font-family: $font-mono;
+  font-size: 12px;
+  color: $text-secondary;
+  text-align: right;
+
+  @media (max-width: $bp-mobile) {
+    text-align: left;
+  }
+}

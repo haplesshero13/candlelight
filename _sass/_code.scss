@@ -1,0 +1,68 @@
+@use "variables" as *;
+
+// ============================================================
+// Code — Syntax highlighting (warm Rouge theme)
+// ============================================================
+
+pre, code {
+  font-family: $font-mono;
+  font-size: 14px;
+}
+
+code {
+  background-color: $bg-chrome;
+  padding: 0.2em 0.4em;
+  border-radius: 2px;
+}
+
+pre {
+  background-color: $bg-dark;
+  color: $text-light;
+  padding: 1.5em;
+  overflow-x: auto;
+  line-height: 1.6;
+
+  code {
+    background-color: transparent;
+    padding: 0;
+    color: inherit;
+  }
+}
+
+// Rouge highlight classes (standard Pygments)
+.highlight {
+  background-color: $bg-dark;
+  color: $text-light;
+  padding: 1.5em;
+  overflow-x: auto;
+  margin-bottom: 1.5em;
+
+  .c, .c1, .cm, .cp, .cs {
+    color: $text-secondary; // Comments
+    font-style: italic;
+  }
+
+  .k, .kd, .kn, .kp, .kr, .kt, .kv {
+    color: $accent; // Keywords
+  }
+
+  .s, .s1, .s2, .sb, .sc, .sd, .se, .sh, .si, .sr, .sx {
+    color: $bg-chrome; // Strings
+  }
+
+  .na, .nc, .nd, .ne, .nf, .ni, .nl, .nn, .no, .nt, .nv {
+    color: $text-light; // Names/Identifiers
+  }
+
+  .o, .ow {
+    color: $text-light; // Operators
+  }
+
+  .p, .pi {
+    color: $text-light; // Punctuation
+  }
+
+  .m, .mb, .mf, .mh, .mi, .mo {
+    color: $bg-chrome; // Numbers
+  }
+}

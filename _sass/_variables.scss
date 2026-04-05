@@ -1,0 +1,28 @@
+// ============================================================
+// Variables — Warm editorial palette & typography tokens
+// ============================================================
+
+// Colors
+$bg-page:       #faefdd;
+$bg-chrome:     #f0d09a;
+$bg-dark:       #2C2622;
+$text-primary:  #292420;
+$text-secondary:#827165;
+$text-light:    #fbf1e1;
+$accent:        #e09b2b;
+$border:        #292420;
+$border-muted:  rgba(41, 36, 32, 0.2);
+
+// Typography
+$font-heading:  'Abril Fatface', Georgia, serif;
+$font-body:     'Nunito Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+$font-mono:     'IBM Plex Mono', 'Courier New', monospace;
+
+// Breakpoints
+$bp-mobile:     768px;
+
+// Layout
+$max-width:     1200px;
+$reading-width: 650px;
+$section-pad:   80px;
+$chrome-pad:    20px 8%;

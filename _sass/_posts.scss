@@ -1,0 +1,114 @@
+@use "variables" as *;
+
+// ============================================================
+// Posts — Post meta, tag pills, shared post components
+// ============================================================
+
+// Post meta (date + tags)
+.post-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 0.75em;
+}
+
+.post-date {
+  font-family: $font-mono;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: $text-secondary;
+}
+
+// Tag pills
+.tag-list {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tag-pill {
+  font-family: $font-mono;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: $text-secondary;
+  border: 0.5px solid $text-secondary;
+  padding: 2px 8px;
+  border-radius: 0;
+
+  &:hover {
+    color: $accent;
+    border-color: $accent;
+  }
+}
+
+// Post detail (used in post layout)
+.post-header {
+  margin-bottom: 2em;
+}
+
+.post-title {
+  font-size: 72px;
+  line-height: 1.1;
+  margin-bottom: 0.5em;
+  font-style: normal;
+}
+
+.post-body {
+  max-width: $reading-width;
+  margin: 0 auto;
+
+  a {
+    text-decoration: underline;
+    text-decoration-color: $border-muted;
+    text-underline-offset: 2px;
+
+    &:hover {
+      text-decoration-color: $accent;
+    }
+  }
+}
+
+// Post detail tags at bottom
+.post-tags-bottom {
+  margin-top: 3em;
+  padding-top: 1.5em;
+  border-top: 0.5px solid $border-muted;
+  max-width: $reading-width;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.post,
+.page {
+  padding: $section-pad 0;
+}
+
+.post-header,
+.page .post-title {
+  max-width: $reading-width;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: $bp-mobile) {
+  .post,
+  .page,
+  .home-content,
+  .recent-posts {
+    padding-top: 56px;
+  }
+
+  .post-title {
+    font-size: 48px;
+  }
+
+  .post-item {
+    padding: 56px 0;
+  }
+}

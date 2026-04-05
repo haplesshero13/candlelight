@@ -9,5 +9,14 @@ CLAUDE.md
 .claude/
 .codex/
 LEARNINGS.md
-.superpowers
+.superpowers/
 trio-agents/
+
+# build output
+_site/
+
+# reviewer tooling leftovers
+node_modules/
+package.json
+package-lock.json
+screenshot.js

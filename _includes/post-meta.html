@@ -1,0 +1,12 @@
+<div class="post-meta">
+  <time class="post-date" datetime="{{ include.post.date | date_to_xmlschema }}">
+    {{ include.post.date | date: "%B %d, %Y" }}
+  </time>
+  {% if include.post.tags %}
+  <ul class="tag-list">
+    {% for tag in include.post.tags %}
+    <li><span class="tag-pill">{{ tag }}</span></li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+</div>
