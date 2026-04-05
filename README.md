@@ -1,4 +1,4 @@
-# Blog Theme
+# Candlelight
 
 A warm, editorial Jekyll theme for technical research blogs. Design inspired by [owltastic.com](https://owltastic.com/) by Meagan Fisher, adapted for a technical aesthetic with generous whitespace and editorial typography.
 
@@ -7,7 +7,7 @@ A warm, editorial Jekyll theme for technical research blogs. Design inspired by 
 1. Add the theme and required plugins to your blog repo:
 
 ```yml
-remote_theme: "haplesshero13/blog-theme"
+remote_theme: "haplesshero13/candlelight"
 plugins:
   - jekyll-remote-theme
   - jekyll-seo-tag
