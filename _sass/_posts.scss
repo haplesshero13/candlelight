@@ -38,6 +38,7 @@
   letter-spacing: 0.05em;
   color: $text-secondary;
   border: 0.5px solid $text-secondary;
+  border-bottom: 0.5px solid $text-secondary;
   padding: 2px 8px;
   border-radius: 0;
 
@@ -62,16 +63,6 @@
 .post-body {
   max-width: $reading-width;
   margin: 0 auto;
-
-  a {
-    text-decoration: underline;
-    text-decoration-color: $border-muted;
-    text-underline-offset: 2px;
-
-    &:hover {
-      text-decoration-color: $accent;
-    }
-  }
 }
 
 // Post detail tags at bottom
