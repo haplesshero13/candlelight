@@ -6,19 +6,3 @@ layout: default
     {{ content }}
   </div>
 </section>
-
-<section class="recent-posts" id="recent-writing">
-  <p class="section-label">Recent Writing</p>
-  <div class="post-list">
-    {% for post in site.posts %}
-    <article class="post-item">
-      {% include post-meta.html post=post %}
-      <h2 class="post-item-title">
-        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-      </h2>
-      <p class="post-item-excerpt">{{ post.excerpt | strip_html | normalize_whitespace | truncatewords: 34 }}</p>
-      <a href="{{ post.url | relative_url }}" class="read-more">Read more &#10140;</a>
-    </article>
-    {% endfor %}
-  </div>
-</section>

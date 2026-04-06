@@ -12,11 +12,9 @@ LEARNINGS.md
 .superpowers/
 trio-agents/
 
+node_modules/
+
 # build output
 _site/
 
-# reviewer tooling leftovers
-node_modules/
-package.json
-package-lock.json
-screenshot.js
+.DS_Store

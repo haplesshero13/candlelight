@@ -20,12 +20,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  @media (max-width: $bp-mobile) {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 12px;
-  }
+  flex-wrap: wrap;
+  gap: 16px;
 }
 
 .site-name {
@@ -53,6 +49,55 @@
   }
 }
 
+.site-nav-toggle {
+  display: none;
+  align-items: center;
+  gap: 12px;
+  margin-left: auto;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: $text-primary;
+  cursor: pointer;
+  font-family: $font-mono;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.site-nav-toggle-label {
+  line-height: 1;
+}
+
+.site-nav-toggle-icon,
+.site-nav-toggle-icon::before,
+.site-nav-toggle-icon::after {
+  display: block;
+  width: 18px;
+  height: 1px;
+  background: currentColor;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.site-nav-toggle-icon {
+  position: relative;
+}
+
+.site-nav-toggle-icon::before,
+.site-nav-toggle-icon::after {
+  content: "";
+  position: absolute;
+  left: 0;
+}
+
+.site-nav-toggle-icon::before {
+  top: -6px;
+}
+
+.site-nav-toggle-icon::after {
+  top: 6px;
+}
+
 .site-nav a,
 .footer-nav a {
   font-family: $font-mono;
@@ -70,6 +115,18 @@
 
 .site-nav a.active {
   border-bottom: 0.5px solid $text-primary;
+}
+
+.site-header[data-nav-open="true"] .site-nav-toggle-icon {
+  background: transparent;
+}
+
+.site-header[data-nav-open="true"] .site-nav-toggle-icon::before {
+  transform: translateY(6px) rotate(45deg);
+}
+
+.site-header[data-nav-open="true"] .site-nav-toggle-icon::after {
+  transform: translateY(-6px) rotate(-45deg);
 }
 
 // Footer
@@ -91,6 +148,21 @@
   padding: $section-pad 0 56px;
 }
 
+.archive-page {
+  padding: $section-pad 0 56px;
+}
+
+.archive-header,
+.archive-body {
+  max-width: $reading-width;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.archive-header {
+  margin-bottom: 2em;
+}
+
 // Section label
 .section-label {
   font-family: $font-mono;
@@ -103,6 +175,10 @@
 
 .recent-posts {
   padding: 0 0 $section-pad;
+}
+
+.archive-posts {
+  padding-top: 0;
 }
 
 .post-list {
@@ -158,5 +234,23 @@
 
   @media (max-width: $bp-mobile) {
     text-align: left;
+  }
+}
+
+@media (max-width: $bp-mobile) {
+  .site-nav-toggle {
+    display: inline-flex;
+  }
+
+  .site-header[data-nav-ready="true"] .site-nav {
+    display: none;
+    width: 100%;
+    padding-top: 16px;
+    margin-top: 4px;
+    border-top: 0.5px solid $border;
+  }
+
+  .site-header[data-nav-ready="true"][data-nav-open="true"] .site-nav {
+    display: flex;
   }
 }

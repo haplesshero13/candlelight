@@ -13,18 +13,24 @@ plugins:
   - jekyll-seo-tag
 ```
 
-2. Use `layout: home` on `index.md`. The home layout renders your markdown content first, then appends the recent post list below it.
+2. Use `layout: home` on `index.md` when you want a standalone homepage or about page.
 
-3. Configure navigation links in `_config.yml`:
+3. Use `layout: archive` on a page such as `writing.md` when you want a dedicated post index. The page body renders first, then the theme appends the post list below it.
+
+4. Configure navigation links in `_config.yml`:
 
 ```yml
 navigation:
   - title: "Home"
     url: "/"
-  - title: "Recent Writing"
-    url: "/#recent-writing"
+  - title: "Research"
+    url: "/research/"
+  - title: "Writing"
+    url: "/writing/"
 ```
 
-4. Posts use the `post` layout by default. Standalone pages use the `page` layout by default.
+5. Posts use the `post` layout by default. Standalone pages use the `page` layout by default.
 
-5. The theme ships with responsive editorial styling, a warm Rouge code theme, and attribution to owltastic.com.
+6. Navigation collapses into a hamburger menu on mobile.
+
+7. The theme ships with responsive editorial styling and a warm Rouge code theme.

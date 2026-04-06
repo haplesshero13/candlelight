@@ -1,0 +1,32 @@
+---
+layout: default
+---
+{% capture archive_content %}{{ content | strip }}{% endcapture %}
+
+<article class="archive-page">
+  <header class="archive-header">
+    <h1 class="post-title">{{ page.title }}</h1>
+  </header>
+
+  {% if archive_content != "" %}
+  <div class="archive-body reading-flow">
+    {{ content }}
+  </div>
+  {% endif %}
+</article>
+
+<section class="recent-posts archive-posts" id="recent-writing">
+  <p class="section-label">{{ page.posts_label | default: "Writing" }}</p>
+  <div class="post-list">
+    {% for post in site.posts %}
+    <article class="post-item">
+      {% include post-meta.html post=post %}
+      <h2 class="post-item-title">
+        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+      </h2>
+      <p class="post-item-excerpt">{{ post.excerpt | strip_html | normalize_whitespace | truncatewords: 34 }}</p>
+      <a href="{{ post.url | relative_url }}" class="read-more">Read more &#10140;</a>
+    </article>
+    {% endfor %}
+  </div>
+</section>

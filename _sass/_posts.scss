@@ -76,23 +76,35 @@
 }
 
 .post,
-.page {
+.page,
+.archive-page {
   padding: $section-pad 0;
 }
 
 .post-header,
-.page .post-title {
+.page .post-title,
+.archive-header {
   max-width: $reading-width;
   margin-left: auto;
   margin-right: auto;
 }
 
+.archive-body {
+  max-width: $reading-width;
+  margin: 0 auto;
+}
+
 @media (max-width: $bp-mobile) {
   .post,
   .page,
+  .archive-page,
   .home-content,
   .recent-posts {
     padding-top: 56px;
+  }
+
+  .archive-posts {
+    padding-top: 0;
   }
 
   .post-title {
